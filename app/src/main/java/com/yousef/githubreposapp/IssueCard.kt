@@ -23,7 +23,7 @@ import androidx.compose.ui.unit.sp
 import com.yousef.githubreposapp.ui.theme.GitHubReposAppTheme
 
 @Composable
-fun RepoItem(modifier: Modifier = Modifier, issue: Issue) {
+fun IssueCard(modifier: Modifier = Modifier, issue: Issue) {
 
     Row(
         modifier = modifier
@@ -69,7 +69,7 @@ fun RepoItem(modifier: Modifier = Modifier, issue: Issue) {
 @Composable
 fun RepoItemPrev() {
     GitHubReposAppTheme {
-        RepoItem(
+        IssueCard(
 
             issue = Issue("donnas", "closed", "20200", R.drawable.ic_launcher_background)
         )
