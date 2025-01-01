@@ -86,48 +86,5 @@ fun RepoCardPrev() {
         R.drawable.ic_launcher_background,
         5000
     )
-    Row(
-        modifier = modifier
-            .padding(0.dp, 8.dp, 0.dp, 0.dp)
-            .clip(RoundedCornerShape(13.dp))
-            .background(Color.White)
-            .padding(12.dp)
-    ) {
-        Image(
-            painter = painterResource(id = repo.img),
-            contentDescription = null,
-            modifier.size(28.dp)
-        )
-        Column(
-            modifier = modifier
-                .padding(10.dp, 0.dp, 0.dp, 0.dp)
-
-        ) {
-            Row(
-                horizontalArrangement = Arrangement.SpaceBetween,
-                modifier = modifier.fillMaxWidth()
-            )
-            {
-                Text(
-                    text = repo.name,
-                    maxLines = 1,
-                    fontSize = 15.sp,
-                    overflow = TextOverflow.Ellipsis,
-                )
-                Row {
-                    Text(text = repo.rate.toString())
-                    Spacer(modifier = modifier.width(8.dp))
-                    Image(
-                        painter = painterResource(id = R.drawable.star_icon),
-                        contentDescription = null,
-                        modifier.size(20.dp)
-                    )
-                }
-            }
-            Spacer(modifier = modifier.height(6.dp))
-            Text(text = repo.owner)
-            Spacer(modifier = modifier.height(8.dp))
-            Text(text = repo.desc, fontWeight = FontWeight(400), fontSize = 17.sp)
-        }
-    }
+    RepoCard(repo = repo)
 }
